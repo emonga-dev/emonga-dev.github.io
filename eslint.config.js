@@ -2,8 +2,8 @@ import js from '@eslint/js'
 import globals from 'globals'
 import reactHooks from 'eslint-plugin-react-hooks'
 import reactRefresh from 'eslint-plugin-react-refresh'
+import react from 'eslint-plugin-react'
 import tseslint from 'typescript-eslint'
-import react from "@vitejs/plugin-react";
 
 export default tseslint.config(
   { ignores: ['dist'] },
@@ -29,7 +29,7 @@ export default tseslint.config(
       'max-len': ['error', { 'code': 160, 'tabWidth': 2 }],
       'semi': ['error', 'always'],
       'object-curly-spacing': ['error', 'always'],
-      'react/-jsx-curly-spacing': ['error', {
+      'react/jsx-curly-spacing': ['error', {
         'when': 'always',
         'children': true,
       }],
@@ -37,7 +37,7 @@ export default tseslint.config(
       'comma-spacing': ['error', { 'before': false, 'after': true }],
       'keyword-spacing': ['error', { 'before': true, 'after': true }],
       'eol-last': ['error', 'always'],
-      'quotes': ['error', 'double'],
+      'quotes': ['error', 'single'],
       'react-hooks/exhaustive-deps': 'off',
       'no-trailing-spaces': ['error'],
     },
