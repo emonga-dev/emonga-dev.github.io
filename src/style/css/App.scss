@@ -1,3 +1,5 @@
+@use 'common/layout';
+
 @font-face {
   font-family: 'Pretendard Variable';
   font-weight: 45 920;
@@ -8,6 +10,11 @@
 
 * {
   font-family: 'Pretendard Variable', Pretendard, -apple-system, system-ui, Roboto, 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Malgun Gothic', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', sans-serif;
+}
+
+#root {
+  width: 100%;
+  font-size: 16px;
 }
 
 html {
@@ -22,7 +29,14 @@ body {
   height: 100%;
 }
 
-#root {
+main {
+  margin: 0 auto;
+  justify-content: center;
   width: 100%;
-  font-size: 16px;
+  max-width: layout.$max-width;
+  padding: layout.$header-height layout.$padding-lr 0 layout.$padding-lr;
+
+  @media(max-width: 768px) {
+    font-size: .9rem;
+  }
 }

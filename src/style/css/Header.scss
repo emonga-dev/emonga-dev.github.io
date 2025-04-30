@@ -1,0 +1,59 @@
+@use 'common/palette';
+@use 'common/layout';
+
+.header {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  top: 0;
+  width: 100%;
+  height: layout.$header-height;
+  background-color: white;
+  opacity: 95%;
+  z-index: 100;
+
+  .inner {
+    max-width: 1280px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: layout.$padding-page;
+
+    .logo {
+      font-size: 3rem;
+      font-weight: bold;
+      color: tomato;
+      text-decoration: none;
+
+      @media (max-width: 768px) {
+        font-size: 2rem;
+      }
+    }
+
+    .nav {
+      display: flex;
+      gap: 2rem;
+
+      a {
+        text-decoration: none;
+        color: palette.$gray-600;
+
+        &:hover {
+          color: tomato;
+        }
+      }
+
+      @media (max-width: 768px) {
+        position: absolute;
+        top: layout.$header-height;
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        background-color: palette.$white;
+
+      }
+    }
+  }
+}
