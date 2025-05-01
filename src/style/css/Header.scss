@@ -48,9 +48,12 @@
       a {
         text-decoration: none;
         color: palette.$gray-600;
+        border-bottom: .1rem solid transparent;
+        transition: all 0.3s;
 
         &:hover {
           color: palette.$primary-color;
+          border-bottom: .1rem solid palette.$primary-color;
         }
 
         @media (max-width: layout.$reactive-width) {
