@@ -1,0 +1,12 @@
+@use './common/layout';
+
+.menu-button {
+  width: 2rem;
+  height: 2rem;
+  background-color: white;
+  display: none;
+
+  @media(max-width: layout.$reactive-width) {
+    display: block;
+  }
+}
