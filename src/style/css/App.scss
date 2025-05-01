@@ -30,14 +30,19 @@ body {
 }
 
 main {
-  margin: 0 auto;
-  justify-content: center;
   width: 100%;
-  max-width: layout.$max-width;
-  padding: layout.$header-height layout.$padding-lr 0 layout.$padding-lr;
+  margin: 0;
 
-  @media(max-width: 768px) {
-    font-size: .9rem;
-    padding-top: layout.$header-height-mobile;
+  .main-content {
+    margin: 0 auto;
+    justify-content: center;
+    width: 100%;
+    max-width: layout.$max-width;
+    padding: layout.$header-height layout.$padding-lr 0 layout.$padding-lr;
+
+    @media(max-width: 768px) {
+      font-size: .9rem;
+      padding-top: layout.$header-height-mobile;
+    }
   }
 }

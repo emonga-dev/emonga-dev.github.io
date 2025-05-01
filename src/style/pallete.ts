@@ -1,0 +1,16 @@
+export const palette = {
+  PRIMARY_COLOR: '#C9A739',
+  SECONDARY_COLOR: '#FFE56D',
+  WHITE: '#ffffff',
+  RED: '#dd0000',
+  GRAY_50: '#f7f7f7',
+  GRAY_100: '#f3f3f3',
+  GRAY_200: '#eeeeee',
+  GRAY_300: '#dddddd',
+  GRAY_400: '#bbbbbb',
+  GRAY_500: '#999999',
+  GRAY_600: '#777777',
+  GRAY_700: '#555555',
+  GRAY_800: '#333333',
+  GRAY_900: '#111111',
+};
