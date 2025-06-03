@@ -16,8 +16,8 @@ const defaultTheme: ColorTheme = {
 };
 
 const ColorThemeContext = createContext<{
-  theme: ColorTheme;
-  setTheme: (theme: ColorTheme) => void;
+  theme: ColorTheme,
+  setTheme: (theme: ColorTheme) => void,
 }>({
   theme: defaultTheme,
   setTheme: () => {},

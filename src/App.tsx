@@ -6,7 +6,9 @@ import Main from './components/layout/Main.tsx';
 import { ColorThemeProvider, useColorTheme } from './contexts/ColorThemeContext.tsx';
 import AboutPage from './pages/AboutPage.tsx';
 import { useEffect } from 'react';
-import ProjectPage from './pages/DetailPage.tsx';
+import ProjectsPage from './pages/ProjectsPage.tsx';
+import ContactPage from './pages/ContactPage.tsx';
+import ProjectDetailPage from './pages/ProjectDetailPage.tsx';
 
 function App() {
   const { theme } = useColorTheme();
@@ -24,11 +26,11 @@ function App() {
         <Header />
         <Main>
           <Routes>
-            <Route path="/" element={ <MainPage /> }></Route>
-            <Route path="/about" element={ <AboutPage /> }></Route>
-            <Route path="/projects" element={ <ProjectPage /> }></Route>
-            <Route path="/contact" element={ <div>스따가대고십으면연락애~</div> }></Route>
-            <Route path="/*" element={ <div>멀봄ㅋ</div> }></Route>
+            <Route path="/" element={ <MainPage /> } />
+            <Route path="/about" element={ <AboutPage /> } />
+            <Route path="/projects" element={ <ProjectsPage /> } />
+            <Route path="/contact" element={ <ContactPage /> } />
+            <Route path="/project/:slug" element={ <ProjectDetailPage /> }/>
           </Routes>
         </Main>
       </HashRouter>
