@@ -6,6 +6,7 @@ import Main from './components/layout/Main.tsx';
 import { ColorThemeProvider, useColorTheme } from './contexts/ColorThemeContext.tsx';
 import AboutPage from './pages/AboutPage.tsx';
 import { useEffect } from 'react';
+import ProjectPage from './pages/DetailPage.tsx';
 
 function App() {
   const { theme } = useColorTheme();
@@ -25,7 +26,7 @@ function App() {
           <Routes>
             <Route path="/" element={ <MainPage /> }></Route>
             <Route path="/about" element={ <AboutPage /> }></Route>
-            <Route path="/projects" element={ <div>프로잭트들</div> }></Route>
+            <Route path="/projects" element={ <ProjectPage /> }></Route>
             <Route path="/contact" element={ <div>스따가대고십으면연락애~</div> }></Route>
             <Route path="/*" element={ <div>멀봄ㅋ</div> }></Route>
           </Routes>
