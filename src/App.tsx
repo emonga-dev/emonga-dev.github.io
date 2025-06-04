@@ -9,6 +9,7 @@ import { useEffect } from 'react';
 import ProjectsPage from './pages/ProjectsPage.tsx';
 import ContactPage from './pages/ContactPage.tsx';
 import ProjectDetailPage from './pages/ProjectDetailPage.tsx';
+import './logic/i18n';
 
 function App() {
   const { theme } = useColorTheme();

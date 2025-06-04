@@ -1,8 +1,10 @@
 import { useColorTheme } from '../contexts/ColorThemeContext.tsx';
 import { useEffect } from 'react';
 import { palette } from '../style/pallete.ts';
+import { useTranslation } from 'react-i18next';
 
 const MainPage = () => {
+  const { t } = useTranslation();
   const { setTheme } = useColorTheme();
 
   useEffect(() => {
@@ -16,9 +18,7 @@ const MainPage = () => {
 
   return (
     <div style={ { fontSize: '6rem' } }>
-      안녕아세요.안녕아세요.안녕아세요.안녕아세요.안녕아세요.안녕아세요.안녕아세요.안녕아세요.안녕아세요.안녕아세요.안녕아세요.안녕아세요.안녕아세요.안녕아세요.안녕아세요.안녕아세요.안녕아세요.안녕아세요.안녕아세요.안녕아세요.안녕아세요.안녕아세요.안녕아세요.
-      안녕아세요.안녕아세요.안녕아세요.안녕아세요.안녕아세요.안녕아세요.안녕아세요.안녕아세요.안녕아세요.안녕아세요.안녕아세요.안녕아세요.안녕아세요.안녕아세요.안녕아세요.안녕아세요.안녕아세요.안녕아세요.안녕아세요.안녕아세요.안녕아세요.안녕아세요.안녕아세요.안녕아세요.안녕아세요.
-      안녕아세요.안녕아세요.안녕아세요.안녕아세요.안녕아세요.안녕아세요.
+      { t('main.greeting') }
     </div>
   );
 };

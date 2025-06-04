@@ -1,0 +1,14 @@
+{
+  "common": {
+    "logo": "YOUNGBANG"
+  },
+  "main": {
+    "greeting": "Hello."
+  },
+  "about": {
+    "description": "Design that seeps quietly into everyday life as if it were casual. For you looking for unfamiliar warmth among familiar things, YOUNGBANG has a small story to tell today as well."
+  },
+  "projects": {
+    "projects": "Projects"
+  }
+}

@@ -4,8 +4,11 @@ import { CSSProperties, useEffect, useState } from 'react';
 import MenuButton from '../MenuButton.tsx';
 import { useScrollLock } from '../../hooks/useScrollLock.ts';
 import { useColorTheme } from '../../contexts/ColorThemeContext.tsx';
+import { useTranslation } from 'react-i18next';
+import LanguageSelector from '../common/LanguageSelector.tsx';
 
 const Header = () => {
+  const { t } = useTranslation();
   const { theme } = useColorTheme();
   const [ isHeaderVisible, setIsHeaderVisible ] = useState(true);
   const [ lastScrollY, setLastScrollY ] = useState(0);
@@ -56,7 +59,7 @@ const Header = () => {
       style={ { backgroundColor, color } }
     >
       <div className="inner">
-        <Link to="/" onClick={ () => closeMenu() } className="logo" style={ { color: accentColor2 } }>애몽가</Link>
+        <Link to="/" onClick={ () => closeMenu() } className="logo" style={ { color: accentColor2 } }>{ t('common.logo') }</Link>
         <nav
           className={ `nav${isMenuOpen ? ' open' : ''}` }
           style={ { '--accent-color': accentColor1 } as CSSProperties }
@@ -65,6 +68,7 @@ const Header = () => {
           <Link to="/projects" onClick={ () => closeMenu() } style={ { color } }>PROJECTS</Link>
           <Link to="/contact" onClick={ () => closeMenu() } style={ { color } }>CONTACT</Link>
         </nav>
+        <LanguageSelector />
         <MenuButton onClick={ toggleMenuOpen } />
       </div>
     </header>
