@@ -1,8 +1,8 @@
 export const palette = {
-  PRIMARY_COLOR: '#C9A739',
+  PRIMARY_COLOR: '#64ff00',
   SECONDARY_COLOR: '#FFE56D',
-  WHITE: '#ffffff',
   RED: '#dd0000',
+  WHITE: '#ffffff',
   GRAY_50: '#f7f7f7',
   GRAY_100: '#f3f3f3',
   GRAY_200: '#eeeeee',
@@ -13,4 +13,5 @@ export const palette = {
   GRAY_700: '#555555',
   GRAY_800: '#333333',
   GRAY_900: '#111111',
+  BLACK: '#000000',
 };

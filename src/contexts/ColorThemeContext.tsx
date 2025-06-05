@@ -1,4 +1,4 @@
-import { palette } from '../style/pallete.ts';
+import { palette } from '../style/palette.ts';
 import { createContext, ReactNode, useContext, useState } from 'react';
 
 export type ColorTheme = {
