@@ -30,14 +30,11 @@
     align-items: center;
     padding: layout.$padding-page;
 
-    .logo {
-      font-size: 3rem;
-      font-weight: bold;
-      text-decoration: none;
-      transition: color .3s ease;
+    .logo-container {
+      width: 16rem;
 
       @media (max-width: layout.$reactive-width) {
-        font-size: 2rem;
+        width: 12rem;
       }
     }
 

@@ -5,6 +5,7 @@ import MenuButton from '../MenuButton.tsx';
 import { useScrollLock } from '../../hooks/useScrollLock.ts';
 import { useColorTheme } from '../../contexts/ColorThemeContext.tsx';
 import LanguageSelector from '../common/LanguageSelector.tsx';
+import logo from '../../assets/images/logo.svg';
 
 const Header = () => {
   const { theme } = useColorTheme();
@@ -47,26 +48,28 @@ const Header = () => {
   }, [isMenuOpen, setIsMenuOpen]);
 
   const backgroundColor = theme.background;
-  const color = theme.base;
+  const baseColor = theme.base;
   const accentColor1 = theme.accent1;
   const accentColor2 = theme.accent2;
 
   return (
     <header
       className={ `header${isMenuOpen || isHeaderVisible ? '' : ' hide'}` }
-      style={ { backgroundColor, color } }
+      style={ { backgroundColor, color: baseColor } }
     >
       <div className="inner">
         <Link to="/" onClick={ () => closeMenu() } className="logo" style={ { color: accentColor2 } }>
-          <img src="../../assets/images/logo.svg" alt="BINDRÜM" />
+          <div className="logo-container">
+            <img src={ logo } alt="BINDRÜM"/>
+          </div>
         </Link>
         <nav
           className={ `nav${isMenuOpen ? ' open' : ''}` }
           style={ { '--accent-color': accentColor1 } as CSSProperties }
         >
-          <Link to="/about" onClick={ () => closeMenu() } style={ { color } }>ABOUT</Link>
-          <Link to="/projects" onClick={ () => closeMenu() } style={ { color } }>PROJECTS</Link>
-          <Link to="/contact" onClick={ () => closeMenu() } style={ { color } }>CONTACT</Link>
+          <Link to="/about" onClick={ () => closeMenu() } style={ { color: baseColor } }>ABOUT</Link>
+          <Link to="/projects" onClick={ () => closeMenu() } style={ { color: baseColor } }>PROJECTS</Link>
+          <Link to="/contact" onClick={ () => closeMenu() } style={ { color: baseColor } }>CONTACT</Link>
         </nav>
         <LanguageSelector />
         <MenuButton onClick={ toggleMenuOpen } />
