@@ -8,11 +8,11 @@ export type ColorTheme = {
   accent2: string;
 };
 
-const defaultTheme: ColorTheme = {
+export const defaultTheme: ColorTheme = {
   background: palette.WHITE,
   base: palette.GRAY_900,
-  accent1: palette.RED,
-  accent2: palette.RED,
+  accent1: palette.PRIMARY_COLOR,
+  accent2: palette.PRIMARY_COLOR,
 };
 
 const ColorThemeContext = createContext<{

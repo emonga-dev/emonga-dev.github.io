@@ -10,6 +10,8 @@ const Main = ({ children }: MainProps) => {
   const style = {
     backgroundColor: theme.background,
     color: theme.base,
+    transition: 'all 0.3s ease',
+    height: '100%',
   };
 
   return (

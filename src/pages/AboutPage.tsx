@@ -1,6 +1,8 @@
+import '../style/css/AboutPage.scss';
 import { useColorTheme } from '../contexts/ColorThemeContext.tsx';
 import { useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
+import { palette } from '../style/palette.ts';
 
 const AboutPage = () => {
   const { t } = useTranslation();
@@ -8,17 +10,19 @@ const AboutPage = () => {
 
   useEffect(() => {
     setTheme({
-      background: '#ff0000',
-      base: '#000000',
-      accent1: '#ffffff',
-      accent2: '#ffffff',
+      background: palette.PRIMARY_COLOR,
+      base: palette.BLACK,
+      accent1: palette.BLACK,
+      accent2: palette.BLACK,
     });
   }, []);
 
   return (
-    <div style={ { backgroundColor: '#ff0000' } }>
-      <h1>{ t('common.logo') }?</h1>
-      <p>{ t('about.description') }</p>
+    <div className='about-page'>
+      <h1>{ t('common.who_are_we') }?</h1>
+      {
+        t('about.description').split('\n').map(line => <p>{ line }</p>)
+      }
     </div>
   );
 };

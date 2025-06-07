@@ -60,7 +60,7 @@ const Header = () => {
       <div className="inner">
         <Link to="/" onClick={ () => closeMenu() } className="logo" style={ { color: accentColor2 } }>
           <div className="logo-container">
-            <Logo style={ { color: accentColor2 } }/>
+            <Logo style={ { color: accentColor2, transition: 'all .3s ease' } }/>
           </div>
         </Link>
         <nav
