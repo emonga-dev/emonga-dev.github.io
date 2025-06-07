@@ -10,5 +10,20 @@
   },
   "projects": {
     "projects": "Projects"
+  },
+  "project": {
+    "branding-campaign": {
+      "title": "Branding Campaign",
+      "description": "This is a brief description for Branding Campaign"
+    },
+    "sundubu-jjigae": {
+      "title": "Sundubu Jjigae",
+      "description": "Korean stew cooked with soft tofu and seasoned"
+    }
+  },
+  "tags": {
+    "branding": "Branding",
+    "figma": "Figma",
+    "food": "Food"
   }
 }

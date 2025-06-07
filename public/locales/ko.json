@@ -6,9 +6,24 @@
     "greeting": "안녕하세요."
   },
   "about": {
-    "description": "무심한 듯 흘러가던 일상에, 조용히 스며드는 디자인.\n 익숙한 것들 사이에서 낯선 온기를 찾는 당신에게, 빈드뤼움은 오늘도 작은 이야기를 건넵니다."
+    "description": "무심한 듯 흘러가던 일상에, 조용히 스며드는 디자인.\n익숙한 것들 사이에서 낯선 온기를 찾는 당신에게, 빈드뤼움은 오늘도 작은 이야기를 건넵니다."
   },
   "projects": {
     "projects": "프로젝트들"
+  },
+  "project": {
+    "branding-campaign": {
+      "title": "브랜딩 캠페인",
+      "description": "브랜딩 캠페인에 대한 설명입니다. 블라 블라 블라"
+    },
+    "sundubu-jjigae": {
+      "title": "순두부찌개",
+      "description": "순두부를 넣고 양념하여 끓인 대한민국의 찌개 요리. 어쩌고 저쩌고"
+    }
+  },
+  "tags": {
+    "branding": "브랜딩",
+    "figma": "Figma",
+    "food": "음식"
   }
 }

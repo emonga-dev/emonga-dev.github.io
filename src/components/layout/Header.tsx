@@ -1,7 +1,7 @@
 import '../../style/css/Header.scss';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { CSSProperties, useEffect, useState } from 'react';
-import MenuButton from '../MenuButton.tsx';
+import MenuButton from './MenuButton.tsx';
 import { useScrollLock } from '../../hooks/useScrollLock.ts';
 import { useColorTheme } from '../../contexts/ColorThemeContext.tsx';
 import LanguageSelector from '../common/LanguageSelector.tsx';
@@ -9,9 +9,12 @@ import Logo from '../../assets/images/logo.svg?react';
 
 const Header = () => {
   const { theme } = useColorTheme();
+  const location = useLocation();
   const [ isHeaderVisible, setIsHeaderVisible ] = useState(true);
   const [ lastScrollY, setLastScrollY ] = useState(0);
   const [ isMenuOpen, setIsMenuOpen ] = useState(false);
+
+  const currentLocation = location.pathname.split('/')[1];
 
   const closeMenu = () => setIsMenuOpen(false);
 
@@ -65,11 +68,20 @@ const Header = () => {
         </Link>
         <nav
           className={ `nav${isMenuOpen ? ' open' : ''}` }
-          style={ { '--accent-color': accentColor1 } as CSSProperties }
+          style={ { '--accent-color': accentColor1, '--base-color': baseColor } as CSSProperties }
         >
-          <Link to="/about" onClick={ () => closeMenu() } style={ { color: baseColor } }>ABOUT</Link>
-          <Link to="/projects" onClick={ () => closeMenu() } style={ { color: baseColor } }>PROJECTS</Link>
-          <Link to="/contact" onClick={ () => closeMenu() } style={ { color: baseColor } }>CONTACT</Link>
+          <Link
+            to="/about" onClick={ () => closeMenu() }
+            className={ currentLocation === 'about' ? 'current' : '' }
+          >ABOUT</Link>
+          <Link
+            to="/projects" onClick={ () => closeMenu() }
+            className={ currentLocation === 'projects' ? 'current' : '' }
+          >PROJECTS</Link>
+          <Link
+            to="/contact" onClick={ () => closeMenu() }
+            className={ currentLocation === 'contact' ? 'current' : '' }
+          >CONTACT</Link>
         </nav>
         <LanguageSelector />
         <MenuButton onClick={ toggleMenuOpen } />

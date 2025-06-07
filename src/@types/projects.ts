@@ -1,22 +1,21 @@
+type tag = 'branding' | 'figma' | 'food';
+
 export type Project = {
   slug: string;
-  title: string;
-  description: string;
-  tags: string[];
+  title?: string;
+  description?: string;
+  tags: tag[];
   // date: string;
 }
 
 export const projects: Project[] = [
   {
     slug: 'branding-campaign',
-    title: 'Branding Campaign',
-    description: 'This is a brief description for Branding Campaign.',
-    tags: ['Branding', 'Figma'],
+    tags: ['branding', 'figma'],
   },
   {
     slug: 'sundubu-jjigae',
-    title: 'Sundubu Jjigae',
-    description: 'This is a brief description for Sundubu Jjigae.',
-    tags: ['Branding', 'Figma', 'Food'],
+    tags: ['branding', 'figma', 'food'],
   },
 ];
+
