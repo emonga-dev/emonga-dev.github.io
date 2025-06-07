@@ -5,7 +5,7 @@ import MenuButton from '../MenuButton.tsx';
 import { useScrollLock } from '../../hooks/useScrollLock.ts';
 import { useColorTheme } from '../../contexts/ColorThemeContext.tsx';
 import LanguageSelector from '../common/LanguageSelector.tsx';
-import logo from '../../assets/images/logo.svg';
+import Logo from '../../assets/images/logo.svg?react';
 
 const Header = () => {
   const { theme } = useColorTheme();
@@ -60,7 +60,7 @@ const Header = () => {
       <div className="inner">
         <Link to="/" onClick={ () => closeMenu() } className="logo" style={ { color: accentColor2 } }>
           <div className="logo-container">
-            <img src={ logo } alt="BINDRÜM"/>
+            <Logo style={ { color: accentColor2 } }/>
           </div>
         </Link>
         <nav
