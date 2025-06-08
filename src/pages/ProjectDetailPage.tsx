@@ -1,6 +1,7 @@
 import { useParams } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import { ProjectDetail } from '../@types/paragraph.ts';
+import LoadingPage from './LoadingPage.tsx';
 
 const ProjectDetailPage = () => {
   const { slug } = useParams<{ slug: string }>();
@@ -26,7 +27,7 @@ const ProjectDetailPage = () => {
 
   // TODO: Handle error. (#12)
   return isLoading
-    ? <div className="loading" />
+    ? <LoadingPage />
     : data
       ? (JSON.stringify(data))
       : (<div>에러입니다.</div>);

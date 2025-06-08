@@ -11,6 +11,7 @@ import ContactPage from './pages/ContactPage.tsx';
 import ProjectDetailPage from './pages/ProjectDetailPage.tsx';
 import './logic/i18n';
 import LanguageSelector from './components/common/LanguageSelector.tsx';
+import LoadingPage from './pages/LoadingPage.tsx';
 
 function App() {
   const { theme } = useColorTheme();
@@ -33,6 +34,7 @@ function App() {
             <Route path="/projects" element={ <ProjectsPage /> } />
             <Route path="/contact" element={ <ContactPage /> } />
             <Route path="/project/:slug" element={ <ProjectDetailPage /> }/>
+            <Route path="/loading" element={ <LoadingPage /> } />
           </Routes>
         </Main>
       </HashRouter>
