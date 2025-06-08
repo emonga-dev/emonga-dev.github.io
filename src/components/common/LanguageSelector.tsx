@@ -1,3 +1,4 @@
+import '../../style/css/common/LanguageSelector.scss';
 import { useTranslation } from 'react-i18next';
 
 const LanguageSelector = () => {
@@ -12,7 +13,11 @@ const LanguageSelector = () => {
     i18n.changeLanguage(newLanguage).then();
   };
 
-  return <code onClick={ () => toggleLanguage() }>{ i18n.language }</code>;
+  return (
+    <div className="language-selector">
+      <code onClick={ () => toggleLanguage() }>{ i18n.language }</code>
+    </div>
+  );
 };
 
 export default LanguageSelector;

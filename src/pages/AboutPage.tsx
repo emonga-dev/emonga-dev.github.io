@@ -1,4 +1,4 @@
-import '../style/css/AboutPage.scss';
+import '../style/css/about/AboutPage.scss';
 import { useColorTheme } from '../contexts/ColorThemeContext.tsx';
 import { useEffect } from 'react';
 import { useTranslation } from 'react-i18next';

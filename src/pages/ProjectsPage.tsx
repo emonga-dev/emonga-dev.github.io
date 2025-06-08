@@ -1,23 +1,34 @@
+import '../style/css/projects/ProjectsPage.scss';
 import { projects } from '../@types/projects.ts';
-import { useTranslation } from 'react-i18next';
-import { defaultTheme, useColorTheme } from '../contexts/ColorThemeContext.tsx';
-import { useEffect } from 'react';
+import { ColorTheme, useColorTheme } from '../contexts/ColorThemeContext.tsx';
+import { CSSProperties, useEffect } from 'react';
 import ProjectCard from '../components/projects/ProjectCard.tsx';
+import { palette } from '../style/palette.ts';
+
+const projectsPageTheme: ColorTheme = {
+  background: palette.GRAY_900,
+  base: palette.GRAY_500,
+  accent1: palette.PRIMARY_COLOR,
+  accent2: palette.PRIMARY_COLOR,
+};
 
 const ProjectsPage = () => {
-  const { t } = useTranslation();
-  const { setTheme } = useColorTheme();
+  const { theme, setTheme } = useColorTheme();
+
+  const baseColor = theme.base;
+  const accentColor1 = theme.accent1;
 
   useEffect(() => {
-    setTheme(defaultTheme);
+    setTheme(projectsPageTheme);
   });
 
-  return (<>
-    <h1>{ t('projects.projects') }</h1>
-    { projects.map(p => (
-      <ProjectCard project={ p } />
-    )) }
-  </>);
+  return (
+    <div className='projects-page' style={ { '--accent-color': accentColor1, '--base-color': baseColor } as CSSProperties }>
+      { projects.map(p => (
+        <ProjectCard project={ p } />
+      )) }
+    </div>
+  );
 };
 
 export default ProjectsPage;

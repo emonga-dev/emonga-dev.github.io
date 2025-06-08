@@ -1,12 +1,12 @@
-@use 'common/layout';
-@use 'common/palette';
+@use 'layout';
+@use 'palette';
 
 @font-face {
   font-family: 'Pretendard Variable';
   font-weight: 45 920;
   font-style: normal;
   font-display: swap;
-  src: url('../../assets/fonts/woff2/PretendardVariable.woff2')
+  src: url('../../../assets/fonts/woff2/PretendardVariable.woff2')
 }
 
 * {
@@ -31,6 +31,7 @@ body {
 }
 
 code {
+  user-select: none;
   display: inline-block;
   font-family: 'Courier New', monospace;
   font-size: 1rem;
@@ -47,9 +48,9 @@ main {
   margin: 0;
 
   .main-content {
+    height: fit-content;
     margin: 0 auto;
     justify-content: center;
-    width: 100%;
     max-width: layout.$max-width;
     padding: layout.$header-height layout.$padding-lr 0 layout.$padding-lr;
 

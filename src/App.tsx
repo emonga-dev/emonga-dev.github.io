@@ -1,4 +1,4 @@
-import './style/css/App.scss';
+import './style/css/common/App.scss';
 import { HashRouter, Route, Routes } from 'react-router-dom';
 import MainPage from './pages/MainPage.tsx';
 import Header from './components/layout/Header.tsx';
@@ -10,6 +10,7 @@ import ProjectsPage from './pages/ProjectsPage.tsx';
 import ContactPage from './pages/ContactPage.tsx';
 import ProjectDetailPage from './pages/ProjectDetailPage.tsx';
 import './logic/i18n';
+import LanguageSelector from './components/common/LanguageSelector.tsx';
 
 function App() {
   const { theme } = useColorTheme();
@@ -35,6 +36,7 @@ function App() {
           </Routes>
         </Main>
       </HashRouter>
+      <LanguageSelector />
     </ColorThemeProvider>
   );
 }

@@ -1,0 +1,24 @@
+@use './palette';
+
+@keyframes loading {
+  0% {
+    background-color: palette.$gray-700;
+  }
+
+  50% {
+    background-color: palette.$gray-800;
+  }
+
+  100% {
+    background-color: palette.$gray-700;
+  }
+}
+
+.loading {
+  width: 100%;
+  height: 254px;
+  animation: loading 1s ease infinite;
+  -webkit-animation: loading 1s ease infinite;
+  -moz-animation: loading 1s ease infinite;
+  -o-animation: loading 1s ease infinite;
+}

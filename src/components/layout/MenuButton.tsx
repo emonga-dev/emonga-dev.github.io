@@ -1,4 +1,4 @@
-import '../../style/css/MenuButton.scss';
+import '../../style/css/common/MenuButton.scss';
 
 export interface MenuButtonProps {
   onClick: () => void;

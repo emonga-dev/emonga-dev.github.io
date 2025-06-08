@@ -17,7 +17,36 @@ const MainPage = () => {
   }, []);
 
   return (
-    <div style={ { fontSize: '6rem' } }>
+    <div style={ { fontSize: '6rem', wordBreak: 'break-word' } }>
+      { t('main.greeting') }
+      { t('main.greeting') }
+      { t('main.greeting') }
+      { t('main.greeting') }
+      { t('main.greeting') }
+      { t('main.greeting') }
+      { t('main.greeting') }
+      { t('main.greeting') }
+      { t('main.greeting') }
+      { t('main.greeting') }
+      { t('main.greeting') }
+      { t('main.greeting') }
+      { t('main.greeting') }
+      { t('main.greeting') }
+      { t('main.greeting') }
+      { t('main.greeting') }
+      { t('main.greeting') }
+      { t('main.greeting') }
+      { t('main.greeting') }
+      { t('main.greeting') }
+      { t('main.greeting') }
+      { t('main.greeting') }
+      { t('main.greeting') }
+      { t('main.greeting') }
+      { t('main.greeting') }
+      { t('main.greeting') }
+      { t('main.greeting') }
+      { t('main.greeting') }
+      { t('main.greeting') }
       { t('main.greeting') }
     </div>
   );

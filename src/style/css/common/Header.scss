@@ -1,5 +1,5 @@
-@use 'common/palette';
-@use 'common/layout';
+@use 'palette';
+@use 'layout';
 
 .header {
   position: fixed;
@@ -44,23 +44,19 @@
 
       a {
         color: var(--base-color);
-        font-weight: 500;
+        font-weight: bold;
         text-decoration: none;
-        border-bottom: .1rem solid transparent;
+        border-bottom: 2px solid transparent;
         transition: all 0.3s;
 
         &:hover, &.current {
           color: var(--accent-color);
-          border-bottom: .1rem solid var(--accent-color);
+          border-bottom: 2px solid var(--accent-color);
         }
 
         @media (max-width: layout.$reactive-width) {
-          color: palette.$white;
+          color: var(--base-color);
           font-size: 3rem;
-
-          &:hover {
-            color: palette.$gray-900;
-          }
         }
       }
 

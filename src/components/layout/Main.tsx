@@ -11,7 +11,8 @@ const Main = ({ children }: MainProps) => {
     backgroundColor: theme.background,
     color: theme.base,
     transition: 'all 0.3s ease',
-    height: '100%',
+    height: 'fit-content',
+    minHeight: '100%',
   };
 
   return (

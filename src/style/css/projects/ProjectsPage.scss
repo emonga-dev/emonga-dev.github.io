@@ -1,0 +1,12 @@
+@use '../common/layout';
+
+.projects-page {
+  padding-top: 3rem;
+  display: flex;
+  flex-wrap: wrap;
+
+  @media (max-width: layout.$reactive-width) {
+    flex-direction: column;
+  }
+
+}
