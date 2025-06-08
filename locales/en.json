@@ -1,6 +1,7 @@
 {
   "common": {
-    "who_are_we": "Who Are We"
+    "who_are_we": "Who Are We",
+    "see-more": "See More"
   },
   "main": {
     "greeting": "Hello."

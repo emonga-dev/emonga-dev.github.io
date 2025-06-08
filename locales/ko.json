@@ -1,6 +1,7 @@
 {
   "common": {
-    "who_are_we": "빈드뤼움"
+    "who_are_we": "빈드뤼움",
+    "see-more": "더보기"
   },
   "main": {
     "greeting": "안녕하세요."
