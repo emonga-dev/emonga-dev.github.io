@@ -15,8 +15,8 @@
 
     &.round {
       flex-shrink: 0;
-      width: 50%;
-      height: 50%;
+      width: 256px;
+      height: 256px;
       border-radius: 50%;
 
       @media (max-width: layout.$reactive-width) {
