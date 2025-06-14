@@ -7,7 +7,7 @@ export type Project = {
   tags: tag[];
   representative?: string;
   // date: string;
-}
+};
 
 export const projects: Project[] = [
   {
