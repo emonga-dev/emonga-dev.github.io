@@ -18,7 +18,7 @@ const MainPage = () => {
 
   return (
     <div style={ { fontSize: '6rem', wordBreak: 'break-word' } }>
-      배포 테스트 버전V2입니다.
+      배포 테스트 버전V3입니다.
     </div>
   );
 };
