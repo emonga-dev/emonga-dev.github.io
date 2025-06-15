@@ -1,10 +1,10 @@
 import { useColorTheme } from '../contexts/ColorThemeContext.tsx';
 import { useEffect } from 'react';
 import { palette } from '../style/palette.ts';
-import { useTranslation } from 'react-i18next';
+// import { useTranslation } from 'react-i18next';
 
 const MainPage = () => {
-  const { t } = useTranslation();
+  // const { t } = useTranslation();
   const { setTheme } = useColorTheme();
 
   useEffect(() => {
