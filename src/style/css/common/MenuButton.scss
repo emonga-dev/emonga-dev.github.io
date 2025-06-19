@@ -1,12 +1,54 @@
 @use 'layout';
 
 .menu-button {
-  width: 2rem;
-  height: 2rem;
-  background-color: white;
+  all: unset;
   display: none;
 
   @media(max-width: layout.$reactive-width) {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: .5rem;
+    align-items: center;
+    cursor: pointer;
+    height: 66%;
+    aspect-ratio: 1 / 1;
+    transition: all .3s ease;
+
+    &:hover {
+      gap: .6rem;
+    }
+
+    .bar {
+      height: 4px;
+      border-radius: 2px;
+      width: 100%;
+      transition: .3s ease;
+      transform-origin: center;
+    }
+
+    &.open {
+
+      &:hover {
+        gap: .5rem;
+      }
+
+      .bar:nth-child(1) {
+        width: 141%;
+        transform: rotate(45deg) translate(14%, 215%);
+      }
+
+      .bar:nth-child(2) {
+        width: 0;
+        opacity: 0;
+      }
+
+      .bar:nth-child(3) {
+        width: 141%;
+        transform: rotate(-45deg) translate(14%, -215%);
+      }
+
+    }
+
   }
 }

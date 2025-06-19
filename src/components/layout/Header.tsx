@@ -82,7 +82,7 @@ const Header = () => {
             className={ currentLocation === 'contact' ? 'current' : '' }
           >CONTACT</Link>
         </nav>
-        <MenuButton onClick={ toggleMenuOpen } />
+        <MenuButton onClick={ toggleMenuOpen } isOpen={ isMenuOpen } />
       </div>
     </header>
   );
