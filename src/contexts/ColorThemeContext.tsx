@@ -1,5 +1,5 @@
 import { palette } from '../style/palette.ts';
-import { createContext, ReactNode, useContext, useState } from 'react';
+import { createContext, ReactNode, useContext, useEffect, useState } from 'react';
 
 export type ColorTheme = {
   background: string;
@@ -27,6 +27,10 @@ export const useColorTheme = () => useContext(ColorThemeContext);
 
 export const ColorThemeProvider = ({ children }: { children: ReactNode }) => {
   const [ theme, setTheme ] = useState<ColorTheme>(defaultTheme);
+
+  useEffect(() => {
+    document.body.style.backgroundColor = theme.background;
+  }, [theme.background]);
 
   return (
     <ColorThemeContext.Provider
