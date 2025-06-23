@@ -11,7 +11,7 @@
   background-color: white;
   opacity: 95%;
   z-index: 100;
-  transition: all 0.3s ease, transfrom 0.1s ease;
+  transition: all 0.3s ease, transform 0.1s ease;
 
   &.hide {
     transform: translateY(-100%);
@@ -40,7 +40,7 @@
 
     .nav {
       display: flex;
-      gap: 2rem;
+      gap: 1rem;
 
       a {
         color: var(--base-color);
@@ -50,18 +50,23 @@
         transition: all 0.3s;
 
         &:hover, &.current {
-          color: var(--accent-color);
-          border-bottom: 2px solid var(--accent-color);
+          color: var(--accent-color-1);
+          border-bottom: 2px solid var(--accent-color-1);
         }
 
         @media (max-width: layout.$reactive-width) {
-          color: var(--base-color);
-          font-size: 3rem;
+          color: var(--accent-color-2);
+          font-size: 2rem;
+
+          &:hover, &.current {
+            color: var(--accent-color-2);
+          }
+
         }
       }
 
       @media (max-width: layout.$reactive-width) {
-        background-color: var(--accent-color);
+        background-color: var(--accent-color-1);
         position: fixed;
         top: layout.$header-height-mobile;
         left: 0;

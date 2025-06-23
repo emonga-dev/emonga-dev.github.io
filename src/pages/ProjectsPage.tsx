@@ -9,7 +9,7 @@ const projectsPageTheme: ColorTheme = {
   background: palette.GRAY_900,
   base: palette.GRAY_500,
   accent1: palette.PRIMARY_COLOR,
-  accent2: palette.PRIMARY_COLOR,
+  accent2: palette.GRAY_900,
 };
 
 const ProjectsPage = () => {

@@ -12,7 +12,7 @@ const MainPage = () => {
       background: palette.WHITE,
       base: palette.GRAY_900,
       accent1: palette.PRIMARY_COLOR,
-      accent2: palette.PRIMARY_COLOR,
+      accent2: palette.BLACK,
     });
   }, []);
 
