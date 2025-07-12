@@ -1,5 +1,5 @@
 import '../../style/css/common/MenuButton.scss';
-import { useColorTheme } from '../../contexts/ColorThemeContext.tsx';
+import { useColorTheme } from '@/contexts/ColorThemeContext.ts';
 
 export interface MenuButtonProps {
   onClick: () => void;

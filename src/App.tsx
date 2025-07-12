@@ -3,7 +3,7 @@ import { HashRouter, Route, Routes } from 'react-router-dom';
 import MainPage from './pages/MainPage.tsx';
 import Header from './components/layout/Header.tsx';
 import Main from './components/layout/Main.tsx';
-import { ColorThemeProvider, useColorTheme } from './contexts/ColorThemeContext.tsx';
+import { useColorTheme } from '@/contexts/ColorThemeContext.ts';
 import AboutPage from './pages/AboutPage.tsx';
 import { useEffect } from 'react';
 import ProjectsPage from './pages/ProjectsPage.tsx';
@@ -24,7 +24,7 @@ function App() {
   }, [theme.background]);
 
   return (
-    <ColorThemeProvider>
+    <>
       <HashRouter>
         <Header />
         <Main>
@@ -39,7 +39,7 @@ function App() {
         </Main>
       </HashRouter>
       <LanguageSelector />
-    </ColorThemeProvider>
+    </>
   );
 }
 

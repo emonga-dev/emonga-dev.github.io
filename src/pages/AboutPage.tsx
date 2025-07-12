@@ -1,5 +1,5 @@
 import '../style/css/about/AboutPage.scss';
-import { useColorTheme } from '../contexts/ColorThemeContext.tsx';
+import { useColorTheme } from '@/contexts/ColorThemeContext.ts';
 import { useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import { palette } from '../style/palette.ts';

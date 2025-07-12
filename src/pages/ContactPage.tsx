@@ -1,5 +1,5 @@
-import { defaultTheme, useColorTheme } from '../contexts/ColorThemeContext.tsx';
 import { useEffect } from 'react';
+import { useColorTheme, defaultTheme } from '@/contexts/ColorThemeContext.ts';
 
 const ContactPage = () => {
   const { setTheme } = useColorTheme();
