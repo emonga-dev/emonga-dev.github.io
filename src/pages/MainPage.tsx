@@ -1,6 +1,6 @@
-import { useColorTheme } from '../contexts/ColorThemeContext.tsx';
+import { useColorTheme } from '@/contexts/ColorThemeContext.ts';
 import { useEffect } from 'react';
-import { palette } from '../style/palette.ts';
+import { palette } from '@/style/palette.ts';
 // import { useTranslation } from 'react-i18next';
 
 const MainPage = () => {
