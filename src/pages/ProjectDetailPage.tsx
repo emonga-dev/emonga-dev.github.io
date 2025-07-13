@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react';
 import { ProjectDetailContent } from '@/@types/project-detail.ts';
 import LoadingPage from './LoadingPage.tsx';
 import ProjectDetailRenderer from '@/components/detail/ProjectDetailRenderer.tsx';
+import ErrorPage from '@/pages/ErrorPage.tsx';
 
 const ProjectDetailPage = () => {
   const { slug } = useParams<{ slug: string }>();
@@ -30,7 +31,7 @@ const ProjectDetailPage = () => {
     ? <LoadingPage />
     : data
       ? <ProjectDetailRenderer content={ data } />
-      : (<div>에러입니다.</div>);  // TODO: Handle error. (#12)
+      : <ErrorPage />;
 };
 
 export default ProjectDetailPage;
