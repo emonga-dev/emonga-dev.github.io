@@ -1,0 +1,145 @@
+@use '../common/palette';
+
+.project-detail-renderer {
+  max-width: 1000px; // Increased max-width for a more spacious feel
+  margin: 0 auto;
+  padding: 40px; // Increased padding
+  font-family: 'Pretendard Variable', sans-serif;
+  line-height: 1.8; // Improved readability
+  color: palette.$gray-800; // Darker text for better contrast
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin-top: 2.5em; // More space above headings
+    margin-bottom: 1em;
+    line-height: 1.3;
+    color: palette.$primary-dark; // Stronger heading color
+    text-shadow: 1px 1px 2px palette.$shadow-color; // Subtle text shadow
+  }
+
+  h1 {
+    font-size: 3.5em; // Larger main heading
+    font-weight: 700;
+  }
+
+  h2 {
+    font-size: 2.8em;
+    font-weight: 600;
+  }
+
+  h3 {
+    font-size: 2.2em;
+    font-weight: 500;
+  }
+
+  p {
+    margin-bottom: 1.5em; // More space between paragraphs
+    font-size: 1.1em;
+  }
+
+  figure {
+    margin: 3em 0; // More vertical space for figures
+    text-align: center;
+
+    img,
+    iframe {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      margin: 0 auto;
+      border-radius: 12px; // More rounded corners
+      box-shadow: 0 8px 16px palette.$shadow-color; // Stronger shadow
+      transition: transform 0.3s ease; // Smooth hover effect
+
+      &:hover {
+        transform: translateY(-5px); // Lift effect on hover
+      }
+    }
+
+    figcaption {
+      font-size: 1em;
+      color: palette.$gray-600;
+      margin-top: 1em; // More space above caption
+      font-style: italic;
+    }
+  }
+
+  ul,
+  ol {
+    margin-bottom: 1.5em;
+    padding-left: 30px; // Increased padding for lists
+
+    li {
+      margin-bottom: 0.8em;
+      font-size: 1.1em;
+    }
+  }
+
+  a {
+    color: palette.$primary-color; // Accent color for links
+    text-decoration: none;
+    transition: color 0.3s ease;
+
+    &:hover {
+      color: palette.$accent-dark;
+      text-decoration: underline;
+    }
+  }
+
+  .role-block {
+    background: linear-gradient(45deg, palette.$gradient-start, palette.$gradient-end); // Gradient background
+    color: palette.$white; // White text on gradient background
+    border: none; // Remove border
+    padding: 25px; // More padding
+    margin: 3em 0;
+    border-radius: 12px; // More rounded corners
+    box-shadow: 0 6px 12px palette.$shadow-color; // Stronger shadow
+
+    h3 {
+      margin-top: 0;
+      color: palette.$white; // White heading on gradient
+      text-shadow: none; // Remove text shadow for headings in role-block
+    }
+
+    p {
+      margin-bottom: 0;
+      color: palette.$white; // White paragraph text on gradient
+    }
+  }
+
+  // Responsive adjustments
+  @media (max-width: 768px) {
+    padding: 20px;
+
+    h1 {
+      font-size: 2.5em;
+    }
+
+    h2 {
+      font-size: 2em;
+    }
+
+    h3 {
+      font-size: 1.8em;
+    }
+
+    p,
+    ul li,
+    ol li {
+      font-size: 1em;
+    }
+
+    figure {
+      margin: 2em 0;
+    }
+
+    .role-block {
+      padding: 20px;
+      margin: 2em 0;
+    }
+  }
+}
