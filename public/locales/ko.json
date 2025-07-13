@@ -30,5 +30,19 @@
     "branding": "브랜딩",
     "figma": "Figma",
     "food": "음식"
+  },
+  "project_details": {
+    "top_gun_cat": {
+      "heading": {
+        "title": "탑건냥 프로젝트"
+      },
+      "paragraph": {
+        "intro": "이것은 탑건냥을 위한 샘플 프로젝트 상세 페이지입니다. 고양이 조종사의 놀라운 모험을 보여줍니다.",
+        "more_details": "탑건냥의 임무에 대한 더 흥미로운 세부 정보가 곧 여기에 추가될 것입니다!"
+      },
+      "image": {
+        "caption": "우리의 용감한 조종사, 탑건냥!"
+      }
+    }
   }
 }

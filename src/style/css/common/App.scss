@@ -60,3 +60,12 @@ main {
     }
   }
 }
+
+button {
+  all: unset;
+  user-select: none;
+  padding: 0 1rem;
+  height: 2rem;
+  border-radius: 1rem;
+  background-color: white;
+}

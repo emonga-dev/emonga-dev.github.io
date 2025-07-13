@@ -1,12 +1,14 @@
 import { useParams } from 'react-router-dom';
 import { useEffect, useState } from 'react';
-import { ProjectDetail } from '../@types/paragraph.ts';
+import { ProjectDetailContent } from '@/@types/project-detail.ts';
 import LoadingPage from './LoadingPage.tsx';
+import ProjectDetailRenderer from '@/components/detail/ProjectDetailRenderer.tsx';
+import ErrorPage from '@/pages/ErrorPage.tsx';
 
 const ProjectDetailPage = () => {
   const { slug } = useParams<{ slug: string }>();
   const [ isLoading, setIsLoading ] = useState<boolean>(false);
-  const [ data, setData ] = useState<ProjectDetail | undefined>(undefined);
+  const [ data, setData ] = useState<ProjectDetailContent | undefined>(undefined);
 
   useEffect(() => {
     if (!slug)  return;
@@ -25,12 +27,11 @@ const ProjectDetailPage = () => {
     }
   };
 
-  // TODO: Handle error. (#12)
   return isLoading
     ? <LoadingPage />
     : data
-      ? (JSON.stringify(data))
-      : (<div>에러입니다.</div>);
+      ? <ProjectDetailRenderer content={ data } />
+      : <ErrorPage />;
 };
 
 export default ProjectDetailPage;

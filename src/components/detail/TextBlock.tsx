@@ -1,16 +1,18 @@
 import React from 'react';
 import { TextContent } from '@/@types/project-detail';
+import { TFunction } from 'i18next';
 
 interface TextBlockProps {
   content: TextContent[];
+  t: TFunction;
 }
 
-const TextBlock: React.FC<TextBlockProps> = ({ content }) => {
+const TextBlock: React.FC<TextBlockProps> = ({ content, t }) => {
   return (
     <>
       { content.map((item, index) => {
         if (item.type === 'text') {
-          let renderedText: React.ReactNode = item.text;
+          let renderedText: React.ReactNode = t(item.text);
 
           if (item.marks) {
             item.marks.forEach((mark) => {

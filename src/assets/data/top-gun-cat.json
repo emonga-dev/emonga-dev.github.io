@@ -8,7 +8,7 @@
       "content": [
         {
           "type": "text",
-          "text": "Top Gun Cat Project"
+          "text": "project_details.top_gun_cat.heading.title"
         }
       ]
     },
@@ -17,23 +17,16 @@
       "content": [
         {
           "type": "text",
-          "text": "This is a sample project detail page for Top Gun Cat. It showcases the amazing adventures of a feline pilot."
+          "text": "project_details.top_gun_cat.paragraph.intro"
         }
       ]
     },
     {
       "type": "image",
       "attrs": {
-        "src": "/images/project/top-gun-cat/IMG_1383.png",
+        "src": "images/project/top-gun-cat/IMG_1383.png",
         "alt": "Top Gun Cat flying a jet",
-        "caption": "Our brave pilot, Top Gun Cat!"
-      }
-    },
-    {
-      "type": "role",
-      "attrs": {
-        "title": "Role",
-        "description": "Lead Pilot, Chief Mouser"
+        "caption": "project_details.top_gun_cat.image.caption"
       }
     },
     {
@@ -41,7 +34,7 @@
       "content": [
         {
           "type": "text",
-          "text": "More exciting details about Top Gun Cat's missions will be added here soon!"
+          "text": "project_details.top_gun_cat.paragraph.more_details"
         }
       ]
     }
