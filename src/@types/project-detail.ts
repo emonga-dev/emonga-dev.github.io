@@ -25,17 +25,15 @@ export interface HeadingBlock extends BaseBlock<'heading', { level: 1 | 2 | 3 | 
   content: TextContent[];
 }
 
-export interface ImageBlock extends BaseBlock<'image', { src: string; alt?: string; caption?: string }> {
-  // Image block has no children
-}
+// Image block has no children
+export type ImageBlock = BaseBlock<'image', { src: string; alt?: string; caption?: string }>
 
 export interface ParagraphBlock extends BaseBlock<'paragraph'> {
   content: TextContent[];
 }
 
-export interface VideoBlock extends BaseBlock<'video', { src: string; caption?: string }> {
-  // Video block has no children
-}
+// Video block has no children
+export type VideoBlock = BaseBlock<'video', { src: string; caption?: string }>
 
 // Represents a single item within a list
 export interface ListItemBlock extends BaseBlock<'list_item'> {
@@ -47,17 +45,6 @@ export interface ListBlock extends BaseBlock<'bullet_list' | 'ordered_list'> {
   content: ListItemBlock[];
 }
 
-
-// =================================================================
-//                          CUSTOM BLOCK TYPES
-// =================================================================
-
-// A custom block for displaying a role, as in your example
-export interface RoleBlock extends BaseBlock<'role', { title: string; description: string }> {
-  // Role block has no children
-}
-
-
 // =================================================================
 //                         UNION AND DOCUMENT TYPES
 // =================================================================
@@ -68,8 +55,7 @@ export type ProjectDetailBlock =
   | ImageBlock
   | ParagraphBlock
   | VideoBlock
-  | ListBlock
-  | RoleBlock;
+  | ListBlock;
 
 // Represents the full JSON structure for a project detail page
 export type ProjectDetailContent = {
