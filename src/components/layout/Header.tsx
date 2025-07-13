@@ -2,8 +2,8 @@ import '../../style/css/common/Header.scss';
 import { Link, useLocation } from 'react-router-dom';
 import { CSSProperties, useEffect, useState } from 'react';
 import MenuButton from './MenuButton.tsx';
-import { useScrollLock } from '../../hooks/useScrollLock.ts';
-import { useColorTheme } from '../../contexts/ColorThemeContext.tsx';
+import { useScrollLock } from '@/hooks/useScrollLock.ts';
+import { useColorTheme } from '@/contexts/ColorThemeContext.ts';
 import Logo from '../../assets/images/logo.svg?react';
 
 const Header = () => {

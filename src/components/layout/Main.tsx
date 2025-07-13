@@ -1,5 +1,5 @@
 import React from 'react';
-import { useColorTheme } from '../../contexts/ColorThemeContext.tsx';
+import { useColorTheme } from '@/contexts/ColorThemeContext.ts';
 
 interface MainProps {
   children: React.ReactNode;

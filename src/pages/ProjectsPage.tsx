@@ -1,7 +1,7 @@
 import '../style/css/projects/ProjectsPage.scss';
 import { projects } from '../@types/projects.ts';
-import { ColorTheme, useColorTheme } from '../contexts/ColorThemeContext.tsx';
 import { CSSProperties, useEffect } from 'react';
+import { ColorTheme, useColorTheme } from '@/contexts/ColorThemeContext.ts';
 import ProjectCard from '../components/projects/ProjectCard.tsx';
 import { palette } from '../style/palette.ts';
 

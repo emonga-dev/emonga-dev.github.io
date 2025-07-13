@@ -1,6 +1,7 @@
-import topGunCat from '../assets/images/project/top-gun-cat/IMG_1383.png';
-
-type tag = 'branding' | 'figma' | 'food';
+type tag =
+  | 'branding'
+  | 'figma'
+  | 'food';
 
 export type Project = {
   slug: string;
@@ -21,7 +22,7 @@ export const projects: Project[] = [
   {
     slug: 'top-gun-cat',
     tags: ['branding'],
-    representative: topGunCat,
+    representative: 'images/project/top-gun-cat/IMG_1383.png',
   },
   {
     slug: 'sundubu-jjigae',

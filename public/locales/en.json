@@ -30,5 +30,19 @@
     "branding": "Branding",
     "figma": "Figma",
     "food": "Food"
+  },
+  "project_details": {
+    "top_gun_cat": {
+      "heading": {
+        "title": "Top Gun Cat Project"
+      },
+      "paragraph": {
+        "intro": "This is a sample project detail page for Top Gun Cat. It showcases the amazing adventures of a feline pilot.",
+        "more_details": "More exciting details about Top Gun Cat's missions will be added here soon!"
+      },
+      "image": {
+        "caption": "Our brave pilot, Top Gun Cat!"
+      }
+    }
   }
 }

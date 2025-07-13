@@ -1,0 +1,42 @@
+{
+  "content": [
+    {
+      "type": "heading",
+      "attrs": {
+        "level": 1
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "project_details.top_gun_cat.heading.title"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "project_details.top_gun_cat.paragraph.intro"
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "attrs": {
+        "src": "images/project/top-gun-cat/IMG_1383.png",
+        "alt": "Top Gun Cat flying a jet",
+        "caption": "project_details.top_gun_cat.image.caption"
+      }
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "project_details.top_gun_cat.paragraph.more_details"
+        }
+      ]
+    }
+  ]
+}

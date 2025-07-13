@@ -3,7 +3,7 @@ import { HashRouter, Route, Routes } from 'react-router-dom';
 import MainPage from './pages/MainPage.tsx';
 import Header from './components/layout/Header.tsx';
 import Main from './components/layout/Main.tsx';
-import { ColorThemeProvider, useColorTheme } from './contexts/ColorThemeContext.tsx';
+import { useColorTheme } from '@/contexts/ColorThemeContext.ts';
 import AboutPage from './pages/AboutPage.tsx';
 import { useEffect } from 'react';
 import ProjectsPage from './pages/ProjectsPage.tsx';
@@ -12,6 +12,7 @@ import ProjectDetailPage from './pages/ProjectDetailPage.tsx';
 import './logic/i18n';
 import LanguageSelector from './components/common/LanguageSelector.tsx';
 import LoadingPage from './pages/LoadingPage.tsx';
+import ErrorPage from '@/pages/ErrorPage.tsx';
 
 function App() {
   const { theme } = useColorTheme();
@@ -24,7 +25,7 @@ function App() {
   }, [theme.background]);
 
   return (
-    <ColorThemeProvider>
+    <>
       <HashRouter>
         <Header />
         <Main>
@@ -35,11 +36,12 @@ function App() {
             <Route path="/contact" element={ <ContactPage /> } />
             <Route path="/project/:slug" element={ <ProjectDetailPage /> }/>
             <Route path="/loading" element={ <LoadingPage /> } />
+            <Route path="/*" element={ <ErrorPage /> } />
           </Routes>
         </Main>
       </HashRouter>
       <LanguageSelector />
-    </ColorThemeProvider>
+    </>
   );
 }
 
