@@ -13,7 +13,7 @@ const AboutPage = () => {
       background: palette.PRIMARY_COLOR,
       base: palette.BLACK,
       accent1: palette.BLACK,
-      accent2: palette.BLACK,
+      accent2: palette.PRIMARY_COLOR,
     });
   }, []);
 
